@@ -37,3 +37,9 @@
 [submodule "bundle/minibufexpl"]
 	path = bundle/minibufexpl
 	url = git://github.com/fholgado/minibufexpl.vim.git
+[submodule "bundle/ipython"]
+	path = bundle/ipython
+	url = git://github.com/ivanov/vim-ipython.git
+[submodule "bundle/tabbar"]
+	path = bundle/tabbar
+	url = git://github.com/vim-scripts/TabBar.git
