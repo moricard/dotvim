@@ -40,11 +40,6 @@ map <Leader>m <esc>:tabnext<CR>
 " Toggle search highlight
 noremap <Leader>v :set hlsearch! hlsearch?<CR>
 
-" screw tabs, use buffers
-noremap <Leader>m :MBEbn<CR>
-noremap <Leader>n :MBEbp<CR>
-map <Leader>f : <Esc>:buffer 
-
 
 " map sort function to a key
 vnoremap <Leader>s :sort<CR>
@@ -55,8 +50,11 @@ let NERDTreeWinSize = 35
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '\.swp$', '\~$']
 
 " Tagbar toggle command
-"nmap <Leader>c :TagbarToggle<CR>
+nmap <Leader>c :TagbarToggle<CR>
 let g:tagbar_left=1
+
+
+map <Leader>f :NERDTreeToggle<CR> 
 
 " Idea style sidebar
 function! NerdTags()
@@ -72,7 +70,7 @@ function! NerdTags()
     wincmd l
 endfunction
 
-map <Leader>t :call NerdTags()<CR>
+map <Leader>t :tabnew .<CR>
 
 " easier moving of code blocks
 vnoremap < <gv  " better indentation
@@ -80,7 +78,7 @@ vnoremap > >gv  " better indentation
 
 " Slime setup for tmux
 let g:slime_target = "tmux"
-" let g:slime_python_ipython = "true"
+let g:slime_python_ipython = "true"
 
 " Solarized colors
 set t_Co=256
